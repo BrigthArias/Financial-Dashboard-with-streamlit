@@ -733,11 +733,6 @@ def run():
     # Get the list of stock tickers from S&P500
     ticker_list = pd.read_html('https://en.wikipedia.org/wiki/List_of_S%26P_500_companies')[0]['Symbol']
     
-    # Add image in the top of sidebar
-    image = Image.open('./img/Yahoo!_Finance_logo_2021.png')
-    st.sidebar.image(image)
-    
-    
     # Add selection box
     global ticker
     ticker = st.sidebar.selectbox("Select a ticker", ticker_list)
